@@ -1,0 +1,9 @@
+ <div class="security-clearance-section p-4 bg-gray-100 rounded-md shadow-md">
+  <h2 class="text-2xl font-bold mb-4">Security Clearance</h2>
+  @for ( clearance of clearanceList; track clearance.level) {
+    <div class="mb-4">
+      <h3 class="text-xl font-semibold">{{ clearance.level }}</h3>
+      <p class="text-base text-gray-700">{{ clearance.agency }}</p>
+    </div>
+  }
+</div>

@@ -1,0 +1,14 @@
+<div class="experience-section p-4 bg-gray-100 rounded-md shadow-md">
+  <h2 class="text-2xl font-bold mb-4">Work Experience</h2>
+  @for (job of jobs; track job.period) {
+  <div class="mb-4">
+    <h3 class="text-xl font-semibold">{{ job.title }}</h3>
+    <p class="text-base text-gray-700">{{ job.company }} | {{ job.period }}</p>
+       @for (duty of job.duties; track duty) {
+        <ul class="list-disc list-inside">
+          <li class="text-base text-gray-700">{{ duty }}</li>
+        </ul>
+      }
+  </div>
+  }
+</div>
